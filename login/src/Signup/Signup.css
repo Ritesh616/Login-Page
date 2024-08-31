@@ -1,6 +1,6 @@
 .addUser {
     width: 30%;
-    margin: 30px auto;
+     margin: 50px auto;
     background-color: aliceblue;
     padding: 40px;
     border-radius: 10px;
@@ -13,7 +13,7 @@
      
  }
  .addUserForm .inputGroup label{
-     margin-top: 5px;
+     margin-top: 10px;
  }
  .addUserForm .inputGroup input{
      margin-top: 5px;
@@ -30,7 +30,7 @@
      font-weight: bold;
      color: darkcyan;
  }
- .Sign{
+ .Submit{
     margin-top: 20px;
     text-align: center;
  }
