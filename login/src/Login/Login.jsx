@@ -23,22 +23,34 @@ const login = () => {
                  placeholder='Enter password'
                 />
 
-               
+               <div className='Login'>
+              <p>Already have an Account ?</p>  
+              </div>      
+
                 <button type="submit" class="btn btn-success">
                     Login
                 </button>
                 
             </div>
+
         </form>
+
         <div className='Sign Up'>
           <p>Don't have Account ?</p>
      
-          <Link to={'/signup'} type='submit' class ='btn btn-primary'>
+          <Link to={'/sign'} type='submit' class ='btn btn-primary'>
           Sign-Up
           </Link>
+
+         
+
         </div>
     
     </div>
+
+    
+
+    
 
   )
 }

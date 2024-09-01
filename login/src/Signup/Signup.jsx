@@ -1,5 +1,5 @@
 import React from 'react'
-import './Signup';
+import './Signup.css';
 
 
 const Signup = () => {
@@ -10,10 +10,7 @@ const Signup = () => {
         <form className="addUserForm">
             <div className='inputGroup'>
                 <label htmlFor='name'>Name:</label>
-                <input type='text'
-                 id="name" 
-                 autoComplete='off' 
-                 placeholder='Enter Name'
+                <input type='text' id="name" placeholder='Enter Name'
                 />
 
                 <label htmlFor='Email'>Email:</label>

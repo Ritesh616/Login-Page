@@ -11,9 +11,13 @@
      display: flex;
      flex-direction: column;
      
+    
+     
+     
  }
  .addUserForm .inputGroup label{
      margin-top: 5px;
+     width: 240px;
  }
  .addUserForm .inputGroup input{
      margin-top: 5px;
@@ -22,7 +26,9 @@
  }
  
  .inputGroup button {
-     margin-top: 10px;
+     margin-top: 5px;
+
+
    
  }
  .addUser h3 {
@@ -33,7 +39,18 @@
  .Sign{
     margin-top: 20px;
     text-align: center;
+    font-size: 10px;
+   
+
  }
 .btn-primary{
     width: 50%;
+   
+}
+
+.Login{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 10px;
+
 }
