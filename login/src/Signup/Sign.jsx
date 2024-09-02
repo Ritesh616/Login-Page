@@ -1,4 +1,5 @@
 import React from 'react'
+import './Sign.css'
 
 const Sign = () => {
   return (
@@ -10,7 +11,7 @@ const Sign = () => {
                     <input type="text" className="form-control" name="name"  />                  
                     </div>
                     </div>
-                
+
                     <div className="row mb-4">
                     <label className="col-sm-2 col-form-label">Email</label>
                     <div className="col-sm-5">
@@ -33,7 +34,7 @@ const Sign = () => {
                     </div>
 
                     <div className="row mb-4">
-                    <label className="col-sm-2 col-form-label">Conform Password</label>
+                    <label className="col-sm-2 col-form-label">Confirm Password</label>
                     <div className="col-sm-5">
                     <input type="text" className="form-control" name="email"   />
                     </div>
@@ -46,11 +47,16 @@ const Sign = () => {
                     </div>
                     </div>
             
-                    <button type="submit" class="btn btn-success">
-                    Sign-Up
-                    </button>
+    
                 </form>
+
+                <button type="submit" class="btn btn-success">
+                    Sign-Up
+                </button>
+
             </div>
+
+            
   );
 }
 

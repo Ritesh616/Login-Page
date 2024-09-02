@@ -10,9 +10,7 @@
      width: px;
      display: flex;
      flex-direction: column;
-     
     
-     
      
  }
  .addUserForm .inputGroup label{
@@ -24,33 +22,36 @@
      padding: 3px;
  
  }
- 
- .inputGroup button {
-     margin-top: 5px;
-
-
-   
+ .addUserForm button {
+    width: 250px;
+    margin: 10px auto;
+    
+  
  }
+ 
+ 
+ 
  .addUser h3 {
      text-align: center;
      font-weight: bold;
      color: darkcyan;
  }
- .Sign{
-    margin-top: 20px;
-    text-align: center;
-    font-size: 10px;
-   
+ 
 
- }
-.btn-primary{
-    width: 50%;
-   
-}
 
 .Login{
     margin-top: 20px;
     text-align: center;
     font-size: 10px;
+
+}
+
+.Login1{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 10px;
+}
+.button{
+    text-align: center;
 
 }

@@ -30,28 +30,22 @@ const login = () => {
                 <button type="submit" class="btn btn-success">
                     Login
                 </button>
+
+
+                <div className='Login1'>
+              <p>Don't have  Account ?</p>  
+              </div>      
+        
+               
+
+                <Link to={'/sign'} type='submit' class="button">Sign-Up</Link>
+                        
                 
             </div>
 
         </form>
 
-        <div className='Sign Up'>
-          <p>Don't have Account ?</p>
-     
-          <Link to={'/sign'} type='submit' class ='btn btn-primary'>
-          Sign-Up
-          </Link>
-
-         
-
-        </div>
-    
     </div>
-
-    
-
-    
-
   )
 }
 
