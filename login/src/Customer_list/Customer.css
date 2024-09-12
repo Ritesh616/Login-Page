@@ -12,14 +12,12 @@ table, th, td {
     border: 2px solid ;
     margin-top: 5px;
     
-    width: 700px;
-    height: 130px;
+    width: 720px;
+    height: 5px;
+    
 }
 
 .head{
     background-color: rgb(17, 136, 227);
-    
-}
-.email{
     
 }

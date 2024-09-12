@@ -7,7 +7,7 @@ const Customer = () => {
         <table>
           <thead className='head'>
             <tr>
-                <th>id</th>
+                <th>Id</th>
                 <th>Customer Name</th>
                 <th>Email</th>
                 <th>Phone No</th>
