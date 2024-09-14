@@ -24,6 +24,7 @@ const Sign = () => {
 
   const navigate = useNavigate();
 
+  // For Setting Name
   const onNameChange = (e) => {
     setName(e.target.value);
   };
