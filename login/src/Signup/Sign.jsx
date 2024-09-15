@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import "./Sign.css";
@@ -8,59 +6,94 @@ import "./Sign.css";
 const initialState = {
   Name: "",
   Email: "",
-  PhoneNo: "",
+  Phone_No: "",
   Password: "",
-  ConfirmPassword: "",
+  Confirm_Password: "",
   Address: "",
 };
 const Sign = () => {
-  const [state, setState] = useState(initialState);
+  const [ setState] = useState(initialState);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNo, setPhoneNo] = useState("");
+  const [phone_no, setPhone_no] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [confirm_password, setConfirm_password] = useState("");
   const [address, setAddress] = useState("");
-
-  const navigate = useNavigate();
 
   // For Setting Name
   const onNameChange = (e) => {
     setName(e.target.value);
+    
   };
 
-  const handleSubmit = (e) => {
+    const onEmailChange = (e) => {
+      setEmail(e.target.value);
+    };
+    
+    const onPhone_noChange = (e) => {
+      setPhone_no(e.target.value);
+    };
+
+    const onPasswordChange = (e) => {
+      setPassword(e.target.value);
+    };
+    const onConfirm_PasswordChange = (e) => {
+      setConfirm_password(e.target.value);
+    };
+    const onAddressChange = (e) => {
+      setAddress(e.target.value);
+    };
+
+
+    const handleSubmit = (e) => {
     e.preventDefault();
+   
+    console.log(name);
+
+    console.log(email);
+
+    console.log(phone_no);
+
+    console.log(password);
+ 
+    console.log(confirm_password);
+    
+    console.log(address);
+    
     if (
       !name ||
       !email ||
-      !phoneNo ||
+      !phone_no ||
       !password ||
-      !confirmPassword ||
-      !address
-    ) {
+      !confirm_password ||
+      !address 
+    ) { 
+      console.log("inif")
       toast.error("Please Provide value into each input field");
     } else {
+      console.log("Data Stored Successfully")
       axios
         .post("http://localhost:3000/user", {
           name,
           email,
-          phoneNo,
+          phone_no,
           password,
-          confirmPassword,
+          confirm_password,
           address,
         })
-        .then(() => {
+        .then((
+        
+        ) => {
           setState({
             name: "",
             email: "",
-            phoneNo: "",
+            phone_no: "",
             password: "",
-            confirmPassword: "",
+            confirm_password: "",
             address: "",
           });
         })
-        .catch((err) => toast.error(err.response.data));
+        .catch((err) => toast.error(err.response));
     }
   };
 
@@ -91,6 +124,7 @@ const Sign = () => {
               type="email"
               className="form-control"
               name="email"
+              onChange={(e) => onEmailChange(e)}
               required
             />
           </div>
@@ -104,7 +138,8 @@ const Sign = () => {
             <input
               type="phone_no"
               className="form-control"
-              name="phone no"
+              name="phone_no"
+              onChange={(e) => onPhone_noChange(e)}
               required
             />
           </div>
@@ -119,6 +154,7 @@ const Sign = () => {
               type="password"
               className="form-control"
               name="password"
+              onChange={(e) => onPasswordChange(e)}
               required
             />
           </div>
@@ -132,7 +168,8 @@ const Sign = () => {
             <input
               type="confirm_password"
               className="form-control"
-              name="confirm password"
+              name="confirm_password"
+              onChange={(e) => onConfirm_PasswordChange(e)}
               required
             />
           </div>
@@ -147,6 +184,7 @@ const Sign = () => {
               type="address"
               className="form-control"
               name="address"
+              onChange={(e) => onAddressChange(e)}
               required
             />
           </div>
