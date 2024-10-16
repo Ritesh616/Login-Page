@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { toast } from "react-toastify";
 import axios from "axios";
 import "./Sign.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const initialState = {
   Name: "",
@@ -12,6 +13,15 @@ const initialState = {
   Address: "",
 };
 const Sign = () => {
+
+  // Display Notification Using Raect-Toastify
+  const diffToast =()=>{
+    toast.success("SignUp SuccessFully", {
+      theme:"colored",
+      position:"top-center"
+    });
+  }
+  
   const [ setState] = useState(initialState);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,18 +32,14 @@ const Sign = () => {
 
   // For Setting Name
   const onNameChange = (e) => {
-    setName(e.target.value);
-    
-  };
-
+    setName(e.target.value);  
+    };
     const onEmailChange = (e) => {
       setEmail(e.target.value);
     };
-    
     const onPhone_noChange = (e) => {
       setPhone_no(e.target.value);
     };
-
     const onPasswordChange = (e) => {
       setPassword(e.target.value);
     };
@@ -44,20 +50,15 @@ const Sign = () => {
       setAddress(e.target.value);
     };
 
-
     const handleSubmit = (e) => {
     e.preventDefault();
-   
+
+  //  Show the Details in Impact-Console
     console.log(name);
-
     console.log(email);
-
     console.log(phone_no);
-
     console.log(password);
- 
     console.log(confirm_password);
-    
     console.log(address);
     
     if (
@@ -96,7 +97,8 @@ const Sign = () => {
         .catch((err) => toast.error(err.response));
     }
   };
-
+  
+  
   return (
     <div>
       <form onSubmit={handleSubmit} className="signupFrom">
@@ -190,11 +192,13 @@ const Sign = () => {
           </div>
         </div>
 
-        <button type="submit" className="btn btn-success">
+        <button type="submit" className="btn btn-success"
+        onClick={diffToast}>
           {" "}
           Sign-Up{" "}
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 };

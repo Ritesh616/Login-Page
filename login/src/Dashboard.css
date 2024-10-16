@@ -1,0 +1,27 @@
+
+.title{
+    text-align: center;
+}
+
+.Border_line{
+    border: 2px solid;
+    margin-top: 10px;
+}
+
+.Cards1 {
+    width: 35rem;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    }
+
+.Cards2 {
+     width: 35rem;
+     margin-top: 15px;
+     margin-left: 100px;
+     margin-right: 100px;
+     margin-bottom: 50px;
+     
+    }
+   
+
